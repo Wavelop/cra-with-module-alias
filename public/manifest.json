@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "CRA: webpack alias",
+  "name": "Create React App: import modules using aliases with Webpack and Typescript",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,5 +1,7 @@
 # Create React App: import modules using aliases with Webpack and Typescript
 
+<img src="https://github.com/Wavelop/cra-module-import-aliasing/blob/master/cra-module-import-aliasing.jpg" alt="Cover - Create React App: import modules using aliases with Webpack and Typescript" width="100%"/>
+
 ## Initialize project using Create React App
 
 Execute the following commands:
@@ -9,7 +11,7 @@ npx create-react-app cra-with-module-alias --template typescript
 cd cra-with-module-alias
 ```
 
-## Setup the environment and intall dependencies
+## Setup the environment and install dependencies
 
 Execute:
 
@@ -75,7 +77,7 @@ Create the following folders inside the **src** one:
 - **services**.
 
 and inside of all of these folders, create an `index.ts` file. 
-Inside of every `index.ts` file we are going to export the contained sub-folders. The sintax that we are going to use will be something like:
+Inside of every `index.ts` file, we are going to export the contained subfolders. The syntax that we are going to use will be something like:
 
 ```javascript
 export { default as ComponentName } from "./ComponentName/ComponentName";
@@ -83,7 +85,7 @@ export { default as ComponentName } from "./ComponentName/ComponentName";
 
 ## Update Webpack configuration to use aliases instead of relative paths
 
-Add to **[config/webpack.config.js]()** file - in particular in the **resolve.alias** variables of the return object - the following lines:
+Add to **[config/webpack.config.js](https://github.com/Wavelop/cra-with-module-alias/blob/master/config/webpack.config.js)** file - in particular in the **[resolve.alias](https://github.com/Wavelop/cra-with-module-alias/blob/master/config/webpack.config.js#L291)** variables of the return object - the following lines:
 
 ```javascript
 // config/webpack.config.js
@@ -115,7 +117,7 @@ import { ServiceName } from 'Services';
 
 ## Update Typescript configuration to use aliases instead of relative paths
 
-Second step to use aliasing is update Typescript configuration. Add to **[tsconfig.json]()** file - in particular in the **resolve.alias** variables of the return object - the following lines:
+The second step, to use aliasing, is to update the Typescript configuration. Add to **[tsconfig.json](https://github.com/Wavelop/cra-with-module-alias/blob/master/tsconfig.json)** file the following lines:
 
 ```json
 // tsconfig.json
@@ -157,9 +159,8 @@ export { default as Logo } from './images/logo.svg';
 
 In the end, we need to update `src/index.tsx` as the following:
 
-`src/index.js:`
-
 ```javascript
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -205,7 +206,6 @@ To execute the test with modules as aliases, we need to update the jest configur
 }
 ```
 
-
 ## Visual Studio Code Tips
 
 Using Visual Studio Code as editor, you can get component names via autocomplete using `CTRL+Space` (or using your combinations).
@@ -223,10 +223,17 @@ Using Visual Studio Code as editor, you can get component names via autocomplete
 
 ## Conclusion
 
-Doing these semple steps you will be able to forget the relative paths and make your folders structure more flexible to the changes. 
+Doing these simple steps you will be able to forget the relative paths and make your folders structure more flexible to the changes. 
 
-You can read the post of our blog [here](https://wavelop.com/en/story/create-react-app-module-import-path-aliasing-with-webpack-typescript/).
+You can find the code of this tutorial [here](https://github.com/Wavelop/cra-with-module-alias), and follow the guide, step by step, in this [PR](https://github.com/Wavelop/cra-with-module-alias/pull/1).
 
 You can take a look at a demo [here](https://cra-module-import-aliasing.web.app/).
 
 If you have questions, please write to us on the chat or an email to [info@wavelop.com](mailto:info@wavelop.com).
+
+Originally published at https://wavelop.com/en/story/create-react-app-module-import-path-aliasing-with-webpack-typescript/ on August 28, 2020.
+
+## Credits
+
+- <span>Photo by <a href="https://unsplash.com/@camwitney?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Cameron Witney</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+- <a href='https://www.freepik.com/vectors/light'>Light vector created by stories - www.freepik.com</a>

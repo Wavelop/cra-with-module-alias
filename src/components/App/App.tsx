@@ -8,16 +8,34 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Solution design and development for your business and startup.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <span>
+          <a
+            className="App-link"
+            href="https://wavelop.com/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit our site
+          </a>, 
+          <a
+            className="App-link"
+            href="https://wavelop.com/en/story/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+             blog
+          </a> or 
+          <a
+            className="App-link"
+            href="https://github.com/Wavelop"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+             Github
+          </a>
+        </span>
       </header>
     </div>
   );
